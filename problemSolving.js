@@ -51,4 +51,23 @@ const mostFrequentEl = function (arr) {
   return frequentKey;
 };
 
-console.log(mostFrequentEl([3, 5, 2, 5, 3, 3, 1, 4, 5]));
+// console.log(mostFrequentEl([3, 5, 2, 5, 3, 3, 1, 4, 5]));
+
+//
+// Task 4: Create a function that takes a sorted array of numbers and a target value as input. The function should find two numbers in the array that add up to the target value. Return an array containing the indices of the two numbers.
+
+const indicesOfTwoNum = function (arr, target) {
+  // Input will be an Array and a target Value
+  let result = [];
+
+  // Loop through the input Array
+  arr.map((el, i) => {
+    // Check the two numbers in the array that add up to the target value
+    el + arr[i + 1] === target && (result = [i, i + 1]);
+  });
+
+  // Return an array containing the indices of the two numbers
+  return result;
+};
+
+// console.log(indicesOfTwoNum([1, 3, 6, 8, 11, 15], 9));

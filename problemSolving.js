@@ -55,7 +55,6 @@ const mostFrequentEl = function (arr) {
 
 //
 // Task 4: Create a function that takes a sorted array of numbers and a target value as input. The function should find two numbers in the array that add up to the target value. Return an array containing the indices of the two numbers.
-
 const indicesOfTwoNum = function (arr, target) {
   // Input will be an Array and a target Value
   let result = [];
@@ -71,3 +70,20 @@ const indicesOfTwoNum = function (arr, target) {
 };
 
 // console.log(indicesOfTwoNum([1, 3, 6, 8, 11, 15], 9));
+
+//
+// Task 5: Implement a simple JavaScript calculator. The calculator should take two numbers and an operator (+, -, *, /) as input and return the result of the operation.
+const myCalculator = function (num1, num2, operator) {
+  // Input will be two numbers and an operator (+, -, *, /)
+  let result;
+
+  operator === "+" && (result = +num1 + +num2);
+  operator === "-" && (result = +num1 - +num2);
+  operator === "*" && (result = +num1 * +num2);
+  operator === "/" && (result = +num1 / +num2);
+
+  // Return the result of the two numbers
+  return result;
+};
+
+console.log(myCalculator(10, 2, "/"));
